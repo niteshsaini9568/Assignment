@@ -8,7 +8,7 @@ const axios = require('axios');
 const app = express();
 
 // Define a URL to fetch
-const url = process.env.URL;
+const url = 'https://www.eventbrite.com/d/india/b2b-marketing/';
 const port = process.env.PORT || 3000;
 
 
@@ -19,7 +19,7 @@ axios.get(url)
 
         // Adjusted selector to target event titles
         const eventTitles = [];
-        $('.SearchResultPanelContentEventCardList-module__map_experiment_event_card____sdj8').each((index, element) => {
+        $('.Stack_root__1ksk7').each((index, element) => {
             const title = $(element).text().trim();
             eventTitles.push(title);
         });
